@@ -18,3 +18,7 @@ app.engine("view", (filePath, options, callback) => {
 
 app.set("views", "/views")
 app.set("view engine", "view")
+
+app.listen(port, () => {
+  console.log(`Server listening on port: ${port}.`)
+})
