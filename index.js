@@ -11,3 +11,5 @@ app.engine("view", (filePath, options, callback) => {
   })
 })
 
+app.set("views", "/views")
+app.set("view engine", "view")
