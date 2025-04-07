@@ -5,10 +5,6 @@ const app = express()
 const port = 3000
 
 app.use(express.static("./styles"))
-
-// app.get("/", (req, res) => {
-  //   res.send("Keeping it simple.");
-  // });
   
 app.engine("mobes", (filePath, options, callback) => {
   fs.readFile(filePath, (err, content) => {
