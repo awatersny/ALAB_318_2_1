@@ -6,19 +6,19 @@ const port = 3000
 
 app.use(express.static("./styles"))
   
-app.engine("mobes", (filePath, options, callback) => {
-  fs.readFile(filePath, (err, content) => {
-    if(err) return callback(err)
+// app.engine("mobes", (filePath, options, callback) => {
+//   fs.readFile(filePath, (err, content) => {
+//     if(err) return callback(err)
       
-    const rendered = content.toString()
-    .replaceAll("<%= title %>", options.title)
-    .replace("<%= content %>", options.content)
-    return callback(null, rendered)
-  })
-})
+//     const rendered = content.toString()
+//     .replaceAll("{=title=}", options.title)
+//     .replace("{=content=}", options.content)
+//     return callback(null, rendered)
+//   })
+// })
   
 app.set("views", "./views")
-app.set("view engine", "mobes")
+app.set("view engine", "ejs")
 app.use("/", indexRoutes);
 
 app.listen(port, () => {
