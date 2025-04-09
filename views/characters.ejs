@@ -10,20 +10,26 @@
     <div id="main">
       <div id="app">
         <h1><%= title %></h1>
-        <% characters.forEach((character, idx) => { %>
-          <div class="char-info" id="<%= idx+1 %>">
-            <img src="<%= character.image %>" alt="<%= character.name %>">
-            <br>
-            Name: <%= character.name %>
-            <br>
-            Species: <%= character.species %>
-            <br>
-            <% character.colors.forEach((color, idx) => { %>
-              Color<%= idx+1 %>: <%= color %>
+        <div id="characters">
+          <% characters.forEach((character, idx) => { %>
+            <div 
+              class="char-info"
+              id="<%= idx+1 %>"
+              style="border-color: <%= character.colors ? character.colors[0] : white %>;"
+            >
+              <img src="<%= character.image %>" alt="<%= character.name %>">
               <br>
-            <% }) %>
-          </div>
-        <% }); %>
+              Name: <%= character.name %>
+              <br>
+              Species: <%= character.species %>
+              <br>
+              <% character.colors.forEach((color, idx) => { %>
+                Color<%= idx+1 %>: <%= color %>
+                <br>
+              <% }) %>
+            </div>
+          <% }); %>
+        </div>
         <a href="/">Back</a>
       </div>
     </div>
