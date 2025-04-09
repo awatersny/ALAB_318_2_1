@@ -5,7 +5,7 @@ const sthChars = [
     colors: ["blue"]
   },
   {
-    name: "Tais",
+    name: "Tails",
     species: "fox",
     colors: ["yellow", "white"]
   },

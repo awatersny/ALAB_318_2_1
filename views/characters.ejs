@@ -10,7 +10,9 @@
     <div id="main">
       <div id="app">
         <h1><%= title %></h1>
-        <div><%= title %></div>
+        <% characters.forEach(character => { %>
+          <div><%= character.name %></div>
+        <% }); %>
       </div>
     </div>
   </body>
