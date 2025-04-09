@@ -16,6 +16,10 @@
             <br>
             Species: <%= character.species %>
             <br>
+            <% character.colors.forEach((color, idx) => { %>
+              Color<%= idx+1 %>: <%= color %>
+              <br>
+            <% }) %>
           </div>
         <% }); %>
         <a href="/">Back</a>
