@@ -7,7 +7,8 @@ router.route("/").get((req, res) => {
   const options = {
     title: "Welcome",
     content:
-      "Now I am using ejs"
+      "Now I am using ejs",
+    link: "Here is a list of Sonic characters."
   };
 
   res.render("index", options);
