@@ -1,10 +1,7 @@
+const sthChars = require("../models/data")
 const express = require("express")
+// const characterRoutes = require("/characters")
 const router = express.Router()
-
-router.use((req, res, next) => {
-  console.log("User Request Time: ", Date.now())
-  next()
-})
 
 router.route("/").get((req, res) => {
   const options = {
@@ -14,6 +11,15 @@ router.route("/").get((req, res) => {
   };
 
   res.render("index", options);
+});
+
+router.route("/characters").get((req, res) => {
+  const options = {
+    title: "Sonic Characters",
+    characters: sthChars
+  };
+
+  res.render("characters", options);
 });
 
 module.exports = router;
