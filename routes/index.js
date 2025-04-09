@@ -7,7 +7,7 @@ router.route("/").get((req, res) => {
   const options = {
     title: "Welcome",
     content:
-      "Now I am using ejs",
+      "I'm just refreshing on ejs here.",
     link: "Here is a list of Sonic characters."
   };
 
