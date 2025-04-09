@@ -10,8 +10,13 @@
     <div id="main">
       <div id="app">
         <h1><%= title %></h1>
-        <% characters.forEach(character => { %>
-          <div><%= character.name %></div>
+        <% characters.forEach((character, idx) => { %>
+          <div class="char-info" id="<%= idx+1 %>">
+            Name: <%= character.name %>
+            <br>
+            Species: <%= character.species %>
+            <br>
+          </div>
         <% }); %>
       </div>
     </div>

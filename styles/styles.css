@@ -12,6 +12,10 @@ body {
   padding: 10px;
 }
 
+.char-info {
+  margin: 30px;
+}
+
 code {
   color: #09507c;
   background: #deedf2;
